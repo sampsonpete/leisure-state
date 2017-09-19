@@ -1,0 +1,24 @@
+.site-branding {
+  border-bottom: 0.0625rem solid $color__text-main;
+  margin-bottom: 3.75rem;
+}
+
+.site-title {
+  font-size: 1.125rem;
+  font-family: $font__logo;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active, {
+    color: $color__highlight;
+    text-decoration: none;
+  }
+}
+
+.site-description {
+  font-size: 0.75rem;
+  margin: 0 0 3.75rem;
+}
