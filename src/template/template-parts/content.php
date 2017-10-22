@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <!-- TODO Add featured image -->
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -27,6 +28,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+    <!-- TODO Display an excerpt for index pages -->
 		<?php
 			the_content( sprintf(
 				wp_kses(
