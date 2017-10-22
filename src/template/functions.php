@@ -45,6 +45,7 @@ if ( ! function_exists( 'leisure_state_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'leisure-state' ),
+      'menu-2' => esc_html__( 'Footer', 'leisure-state' ),
 		) );
 
 		/*
@@ -155,4 +156,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

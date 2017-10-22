@@ -45,7 +45,7 @@
       endif; ?>
     </div><!-- .site-branding -->
 
-    <?php /* get_template_part( 'template-parts/navigation' ); */ ?>
+    <?php get_template_part( 'template-parts/navigation' ); ?>
   </header><!-- #masthead -->
 
   <div id="content" class="site-content">
