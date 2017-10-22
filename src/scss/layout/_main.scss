@@ -1,7 +1,7 @@
 .site {
   margin: 2rem;
 }
-@include media(">=tablet") {
+@include mappy-bp(medium) {
   .site {
     margin: 3rem 6rem;
   }

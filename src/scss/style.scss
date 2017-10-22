@@ -45,9 +45,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 /*--------------------------------------------------------------
 # Breakpoints
-# https://github.com/eduardoboucas/include-media/
+# https://github.com/zellwk/mappy-breakpoints
 --------------------------------------------------------------*/
-@import "../../node_modules/include-media/dist/include-media";
+@import './node_modules/mappy-breakpoints/mappy-breakpoints';
 
 /*--------------------------------------------------------------
 # Grid
