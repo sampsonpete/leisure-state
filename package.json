@@ -20,7 +20,7 @@
     "gulp-strip-debug": "^1.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "include-media": "^1.4.9",
+    "mappy-breakpoints": "^0.2.3",
     "postcss-assets": "^4.2.0",
     "susy": "^3.0.1"
   },
