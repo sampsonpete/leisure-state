@@ -1,0 +1,30 @@
+.site-footer {
+  border-top: 0.0625rem solid $color__text-main;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  font-size: $font__size-small;
+  width: 100%;
+  @include clearfix;
+
+  @include mappy-bp(large) {
+    border-top: 0;
+  }
+}
+
+.menu-footer-menu-container {
+  float: left;
+  width: 50%;
+}
+
+.copyright {
+  float: right;
+  text-align: right;
+  margin: 0;
+  width: 50%;
+}
+
+#footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

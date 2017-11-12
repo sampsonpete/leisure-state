@@ -76,7 +76,7 @@ var css = {
     require('autoprefixer')({
       browsers: ['last 2 versions', '> 2%']
     }),
-    require('css-mqpacker'),
+    // require('css-mqpacker'),
     require('cssnano')
   ]
 };

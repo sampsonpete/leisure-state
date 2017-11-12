@@ -11,12 +11,18 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <header class="entry-header">
-  <!-- If is not singular and has featured image, show the featured image -->
-  <?php if (!is_singular() && has_post_thumbnail()) :
-  the_post_thumbnail();
+  <!-- Featured image for article pages -->
+  <?php if (is_singular() && has_post_thumbnail()) :
+  echo '<div class="article-featured-image">' . get_the_post_thumbnail() . '</div><div class="article-content">';
+  elseif (is_singular() && !has_post_thumbnail()) :
+  echo '<div class="article-content">';
   endif; ?>
 
+  <header class="entry-header">
+  <!-- Featured image for index pages -->
+  <?php if (!is_singular() && has_post_thumbnail()) :
+  echo '<a href="' . esc_url( get_permalink() ) . '">' . get_the_post_thumbnail() . '</a>';
+  endif; ?>
   <?php
   if ( is_singular() ) :
   the_title( '<h1 class="entry-title">', '</h1>' );
@@ -32,7 +38,7 @@
   if ($posttags) {
     echo '<ul class="entry-tags">';
     foreach($posttags as $tag) {
-      echo '<li>' . $tag->name . '</li>';
+      echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></li>';
     }
     echo '</ul>';
   } ?>
@@ -45,7 +51,7 @@
     else show the full post content -->
     <?php if (!is_singular() && has_excerpt()) :
     the_excerpt();
-    echo '<a href="' . get_permalink() . '">Read more</a>';
+    echo '<a href="' . get_permalink() . '" class="read-more-link">Read more</a>';
     else:
 			the_content( sprintf(
 				wp_kses(
@@ -66,5 +72,10 @@
 			) );
   	endif; ?>
   </div><!-- .entry-content -->
+
+  <!-- Close article div -->
+  <?php if (is_singular()) :
+  echo '</div>';
+  endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

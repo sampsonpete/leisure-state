@@ -22,8 +22,10 @@ hr {
 @import "lists";
 
 img {
+  display: block;
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+  width: 100%;
 }
 
 figure {

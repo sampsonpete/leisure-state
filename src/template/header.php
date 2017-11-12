@@ -18,7 +18,7 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
 
   <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded:800|BioRhyme:300|Work+Sans:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded:800|BioRhyme:300|Work+Sans:400,500,400italic" rel="stylesheet">
 
   <?php wp_head(); ?>
 </head>

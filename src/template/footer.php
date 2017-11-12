@@ -21,7 +21,7 @@
       ) );
     ?>
 
-    <p>&copy; Leisure State <?php echo date("Y"); ?></p>
+    <p class="copyright">&copy; Leisure State <?php echo date("Y"); ?></p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

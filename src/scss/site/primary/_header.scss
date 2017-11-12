@@ -1,11 +1,11 @@
-.site-branding {
-  border-bottom: 0.0625rem solid $color__text-main;
-  margin-bottom: 3.75rem;
+.site-header {
+  margin-bottom: 4rem;
 }
 
 .site-title {
   font-size: 1rem;
   font-family: $font__logo;
+  line-height: 1;
   margin: 0 0 0.75rem;
   text-transform: uppercase;
 
@@ -23,6 +23,5 @@
 }
 
 .site-description {
-  font-size: 0.75rem;
-  margin: 0 0 3.75rem;
+  font-size: $font__size-small;
 }
