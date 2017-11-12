@@ -1,0 +1,27 @@
+.site-header {
+  margin-bottom: 4rem;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-family: $font__logo;
+  line-height: 1;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+
+  @include mappy-bp(medium) {
+    font-size: 1.125rem;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active, {
+    color: $color__highlight;
+    text-decoration: none;
+  }
+}
+
+.site-description {
+  font-size: $font__size-small;
+}

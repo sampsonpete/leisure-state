@@ -1,22 +1,144 @@
-.sticky {
-	display: block;
-}
+/**
+ * General post and page stuff
+ **/
 
-.hentry {
-	margin: 0 0 1.5em;
+.sticky {
+  display: block;
 }
 
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
+.post {
+  border-bottom: 0.0625rem solid $color__text-main;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  @include clearfix;
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+.attachment-post-thumbnail {
+  margin-bottom: 1.5rem;
+}
+
+.entry-title{
+  font-size: $font__size-large;
+  @include mappy-bp(medium) {
+    font-size: $font__size-extralarge;
+  }
+}
+
+.page-title {
+  font-size: $font__size-large;
+  margin-bottom: 2rem;
+}
+
+.entry-meta {
+  font-size: $font__size-small;
+}
+
+.entry-tags {
+  list-style: none;
+  margin: 1rem 0 3rem;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+}
+
+.entry-content {
+  font-size: $font__size-medium;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  .read-more-link {
+    font-size: $font__size-small;
+  }
+}
+
+/**
+ * Position post meta and entry content on larger screens
+ * Only on index pages
+ **/
+@include mappy-bp(medium) {
+
+  body.blog,
+  body.tag,
+  body.category {
+
+    .entry-meta {
+      float: left;
+      width: 25%;
+    }
+
+    .entry-content {
+      float: right;
+      width: 65%;
+    }
+  }
+}
+
+/**
+ * Article pages
+ **/
+
+@include mappy-bp(large) {
+
+  .article-featured-image {
+    float: left;
+    width: 47.5%;
+  }
+
+  .article-content {
+    float: right;
+    width: 47.5%;
+  }
+}
+
+.entry-content {
+
+  p,
+  img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.wp-caption {
+  width: 100% !important;
+}
+
+.wp-caption .wp-caption-text {
+  font-size: $font__size-small;
+  margin-bottom: 2rem !important;
+}
+
+/**
+ * Post navigation
+ **/
+.post-navigation {
+  border-bottom: 0.0625rem solid $color__text-main;
+  font-size: $font__size-medium;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+
+  @include mappy-bp(medium) {
+    margin-bottom: 0;
+  }
+
+  .nav-previous::before {
+    content: 'Previous: ';
+  }
+
+  .nav-next::before {
+    content: 'Next: ';
+  }
+
+  .nav-links div {
+    margin-bottom: 2rem;
+  }
 }

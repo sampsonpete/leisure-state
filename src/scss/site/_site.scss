@@ -1,9 +1,11 @@
-// @import "../layout/content-sidebar";
-// @import "../layout/sidebar-content";
+@import "../layout/main";
+@import "../layout/index";
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 @import "primary/posts-and-pages";
+@import "primary/header";
+@import "primary/footer";
 
 /*--------------------------------------------------------------
 ## Comments

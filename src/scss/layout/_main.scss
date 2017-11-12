@@ -1,0 +1,45 @@
+.site {
+  margin: 2rem;
+}
+
+@include mappy-bp(medium) {
+  .site {
+    margin: 3rem 6rem;
+  }
+}
+
+@include mappy-bp(large) {
+  .site {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
+}
+
+body.blog,
+body.tag,
+body.category {
+  @include mappy-bp(large) {
+    .content-area {
+      float: left;
+      margin: 0 -40% 0 0;
+      width: $size__site-main;
+    }
+
+    .site-main {
+      margin: 0 40% 0 0;
+    }
+
+    .site-content .widget-area {
+      float: right;
+      overflow: hidden;
+      width: $size__site-sidebar;
+    }
+  }
+}
+@include mappy-bp(large) {
+
+  .site-footer {
+    clear: both;
+    width: $size__site-main;
+  }
+}

@@ -10,6 +10,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+  <!-- Featured image for article pages -->
+  <?php if (is_singular() && has_post_thumbnail()) :
+  echo '<div class="article-featured-image">' . get_the_post_thumbnail() . '</div><div class="article-content">';
+  elseif (is_singular() && !has_post_thumbnail()) :
+  echo '<div class="article-content">';
+  endif; ?>
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
@@ -47,4 +55,9 @@
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
+
+  <!-- Close article div -->
+  <?php if (is_singular()) :
+  echo '</div>';
+  endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
