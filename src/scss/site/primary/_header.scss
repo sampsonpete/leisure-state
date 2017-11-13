@@ -8,6 +8,7 @@
   line-height: 1;
   margin: 0 0 0.75rem;
   text-transform: uppercase;
+  text-indent: -0.45rem;
 
   @include mappy-bp(medium) {
     font-size: 1.125rem;
@@ -23,5 +24,5 @@
 }
 
 .site-description {
-  font-size: $font__size-small;
+  font-size: 1rem;
 }

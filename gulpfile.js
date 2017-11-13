@@ -103,7 +103,7 @@ gulp.task('js', () => {
 
   return gulp.src(js.src)
     .pipe(deporder())
-    .pipe(concat(js.filename))
+    // .pipe(concat(js.filename))
     .pipe(stripdebug())
     .pipe(uglify())
     .pipe(gulp.dest(js.build))
