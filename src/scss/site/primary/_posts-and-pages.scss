@@ -11,15 +11,17 @@
 }
 
 .post {
-  border-bottom: 0.0625rem solid $color__text-main;
   margin-bottom: 4rem;
-  padding-bottom: 4rem;
   @include clearfix;
 }
 
 .attachment-post-thumbnail {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
+
+/**
+ * Title on index pages
+ **/
 
 .entry-title{
   font-size: $font__size-large;
@@ -28,18 +30,17 @@
   }
 }
 
-.page-title {
-  font-size: $font__size-large;
-  margin-bottom: 2rem;
-}
+/**
+ * Date and tags
+ **/
 
 .entry-meta {
-  font-size: $font__size-small;
+  font-size: $font__size-medium;
 }
 
 .entry-tags {
   list-style: none;
-  margin: 1rem 0 3rem;
+  margin: 0 0 2rem;
   padding: 0;
 
   li {
@@ -47,6 +48,10 @@
     margin-right: 0.5rem;
   }
 }
+
+/**
+ * Content on index and article pages
+ **/
 
 .entry-content {
   font-size: $font__size-medium;
@@ -56,7 +61,7 @@
   }
 
   .read-more-link {
-    font-size: $font__size-small;
+    font-size: $font__size-medium;
   }
 }
 
@@ -64,6 +69,7 @@
  * Position post meta and entry content on larger screens
  * Only on index pages
  **/
+
 @include mappy-bp(medium) {
 
   body.blog,
@@ -118,10 +124,19 @@
 }
 
 /**
+ * Title on article pages
+ **/
+
+.page-title {
+  font-size: $font__size-large;
+  margin-bottom: 2rem;
+}
+
+/**
  * Post navigation
  **/
+
 .post-navigation {
-  border-bottom: 0.0625rem solid $color__text-main;
   font-size: $font__size-medium;
   margin-bottom: 4rem;
   padding-bottom: 2rem;
@@ -142,3 +157,5 @@
     margin-bottom: 2rem;
   }
 }
+
+#sb_instagram { background-color: #ccc; }

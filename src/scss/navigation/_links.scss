@@ -1,6 +1,8 @@
 a {
+  border-bottom: 0.125rem solid $color__link;
 	color: $color__link;
-  transition: color 200ms ease;
+  text-decoration: none;
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
 
 	&:visited {
 		color: $color__link-visited;
@@ -8,7 +10,9 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+    background-color: $color__link-hover;
+    // border-color: $color__link-hover;
+		color: $color__link;
 	}
 	&:focus {
 		outline: none;

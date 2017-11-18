@@ -1,28 +1,48 @@
 .site-header {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+
+  @include mappy-bp(medium) {
+    margin-bottom: 4rem;
+  }
 }
 
 .site-title {
-  font-size: 1rem;
   font-family: $font__logo;
-  line-height: 1;
+  line-height: 0.75;
   margin: 0 0 0.75rem;
   text-transform: uppercase;
-  text-indent: -0.45rem;
+  text-indent: -0.15rem;
+
+  @include mappy-bp(small) {
+    text-indent: -0.3rem;
+  }
 
   @include mappy-bp(medium) {
     font-size: 1.125rem;
+    text-indent: -0.3rem;
+  }
+
+  @include mappy-bp(large) {
+    margin-bottom: 2rem;
+    text-indent: -0.45rem;
   }
 
   a:link,
-  a:visited,
+  a:visited {
+    background-color: transparent;
+    border: 0;
+    // color: $color__link;
+  }
   a:hover,
-  a:active, {
-    color: $color__highlight;
-    text-decoration: none;
+  a:active {
+    color: $color__link-hover;
   }
 }
 
 .site-description {
-  font-size: 1rem;
+  font-size: $font__size-medium;
+
+  @include mappy-bp(small) {
+    font-size: $font__size-medium;
+  }
 }
