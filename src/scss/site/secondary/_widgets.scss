@@ -7,7 +7,7 @@
 }
 
 .widget {
-  font-size: $font__size-small;
+  font-size: $font__size-alpha;
 	margin: 0 0 4rem;
 
 	/* Make sure select elements fit in widgets. */
@@ -18,7 +18,7 @@
   h2,
   h3,
   #sb_instagram .sb_instagram_header h3 {
-    font-size: $font__size-small;
+    font-size: $font__size-alpha;
     font-family: $font__main;
     font-weight: 500;
     margin-top: 0;
@@ -27,6 +27,6 @@
   }
 
   #sb_instagram .sb_instagram_header p {
-    font-size: $font__size-small;
+    font-size: $font__size-alpha;
   }
 }

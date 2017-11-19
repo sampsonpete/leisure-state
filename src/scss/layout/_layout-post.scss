@@ -1,0 +1,25 @@
+body.single {
+
+  @include mappy-bp(medium) {
+    .entry-title {
+      float: left;
+      margin-right: 4rem;
+      width: calc(66.6% - 3rem);
+    }
+    .entry-meta {
+      float: left;
+      width: calc(33.3% - 1rem);
+    }
+  }
+
+  .entry-content,
+  .post-navigation {
+    clear: left;
+
+    @include mappy-bp(medium) {
+      margin-left: calc(25%);
+      width: calc(50%);
+    }
+  }
+
+}

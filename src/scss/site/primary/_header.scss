@@ -18,6 +18,7 @@
   }
 
   @include mappy-bp(medium) {
+    margin-bottom: 1.5rem;
     font-size: 1.125rem;
     text-indent: -0.3rem;
   }
@@ -40,9 +41,5 @@
 }
 
 .site-description {
-  font-size: $font__size-medium;
-
-  @include mappy-bp(small) {
-    font-size: $font__size-medium;
-  }
+  font-size: $font__size-bravo;
 }

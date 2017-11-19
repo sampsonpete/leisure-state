@@ -11,71 +11,83 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <!-- Featured image for article pages -->
-  <?php if (is_singular() && has_post_thumbnail()) :
-  echo '<div class="article-featured-image">' . get_the_post_thumbnail() . '</div><div class="article-content">';
-  elseif (is_singular() && !has_post_thumbnail()) :
-  echo '<div class="article-content">';
-  endif; ?>
+  <?php if ( !is_singular() ) : ?>
 
-  <header class="entry-header">
-  <!-- Featured image for index pages -->
-  <?php if (!is_singular() && has_post_thumbnail()) :
-  echo '<a href="' . esc_url( get_permalink() ) . '">' . get_the_post_thumbnail() . '</a>';
-  endif; ?>
-  <?php
-  if ( is_singular() ) :
-  the_title( '<h1 class="entry-title">', '</h1>' );
-  else :
-  the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-  endif; ?>
-  </header><!-- .entry-header -->
+    <!-- Index pages -->
+    <div class="entry-wrapper">
 
-  <?php if ( 'post' === get_post_type() ) : ?>
-  <div class="entry-meta">
-  <?php leisure_state_posted_on(); ?>
-  <?php $posttags = get_the_tags();
-  if ($posttags) {
-    echo '<ul class="entry-tags">';
-    foreach($posttags as $tag) {
-      echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></li>';
-    }
-    echo '</ul>';
-  } ?>
-  </div><!-- .entry-meta -->
-  <?php
-  endif; ?>
+      <!-- Featured image -->
+      <div class="entry-image">
+        <a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo get_the_post_thumbnail(); ?></a>
+      </div>
 
-  <div class="entry-content">
-    <!-- If is not singular and has excerpt, show the post excerpt,
-    else show the full post content -->
-    <?php if (!is_singular() && has_excerpt()) :
-    the_excerpt();
-    echo '<a href="' . get_permalink() . '" class="read-more-link">Read more</a>';
-    else:
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'leisure-state' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+      <div class="entry-info">
+        <!-- Article title -->
+        <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'leisure-state' ),
-				'after'  => '</div>',
-			) );
-  	endif; ?>
-  </div><!-- .entry-content -->
+        <!-- Date and tags -->
+        <div class="entry-meta">
+        <?php leisure_state_posted_on();
+        $posttags = get_the_tags();
+        if ($posttags) {
+          echo '<ul class="entry-tags">';
+          foreach($posttags as $tag) {
+            echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></li>';
+          }
+          echo '</ul>';
+        } ?>
+        </div>
 
-  <!-- Close article div -->
-  <?php if (is_singular()) :
-  echo '</div>';
-  endif; ?>
+        <!-- Excerpt -->
+        <?php the_excerpt();
+        echo '<a href="' . esc_url( get_permalink() ) . '" class="read-more-link">Read more</a>'; ?>
+      </div>
+    </div>
+
+  <?php else : ?>
+
+    <!-- Article pages -->
+    <div class="entry-wrapper">
+
+      <!-- Article title -->
+      <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+      <!-- Date and tags -->
+      <div class="entry-meta">
+      <?php leisure_state_posted_on();
+      $posttags = get_the_tags();
+      if ($posttags) {
+        echo '<ul class="entry-tags">';
+        foreach($posttags as $tag) {
+          echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></li>';
+        }
+        echo '</ul>';
+      } ?>
+      </div>
+
+      <!-- Featured image -->
+      <div class="entry-image">
+        <?php echo get_the_post_thumbnail(); ?>
+      </div>
+
+      <!-- Article content -->
+      <div class="entry-content">
+        <?php the_content( sprintf(
+          wp_kses(
+            /* translators: %s: Name of current post. Only visible to screen readers */
+            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'leisure-state' ),
+            array(
+              'span' => array(
+                'class' => array(),
+              ),
+            )
+          ),
+          get_the_title()
+        ) );
+      ?>
+      </div>
+    </div>
+
+  <?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -8,6 +8,6 @@
 
 ( function( $ ) {
 
-  $(".site-title").fitText(0.755);
+  $(".site-title").fitText(0.756);
 
 } )( jQuery );

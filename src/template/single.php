@@ -17,7 +17,16 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation();
+      $args = array(
+      	'prev_text'          => 'Previous article %title',
+      	'next_text'          => 'Next article %title',
+      	'in_same_term'       => false,
+      	'taxonomy'           => 'category',
+      	'excluded_terms'     => array(),
+      	'screen_reader_text' => 'Post navigation'
+      );
+
+			the_post_navigation($args);
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
