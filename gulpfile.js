@@ -20,7 +20,8 @@ const
   deporder      = require('gulp-deporder'),
   concat        = require('gulp-concat'),
   stripdebug    = require('gulp-strip-debug'),
-  uglify        = require('gulp-uglify')
+  uglify        = require('gulp-uglify'),
+  sourcemaps    = require('gulp-sourcemaps')
 ;
 
 // Browser-sync
@@ -57,7 +58,7 @@ gulp.task('images', () => {
 
 
 // CSS settings
-var css = {
+const css = {
   src         : dir.src + 'scss/style.scss',
   watch       : dir.src + 'scss/**/*',
   build       : dir.build,
@@ -84,8 +85,10 @@ var css = {
 // CSS processing
 gulp.task('css', ['images'], () => {
   return gulp.src(css.src)
+    .pipe(sourcemaps.init())
     .pipe(sass(css.sassOpts))
     .pipe(postcss(css.processors))
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(css.build))
     .pipe(browsersync ? browsersync.reload({ stream: true }) : gutil.noop());
 });
