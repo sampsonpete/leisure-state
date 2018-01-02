@@ -13,6 +13,8 @@
 
 	</div><!-- #content -->
 
+  <div id="instafeed"></div>
+
 	<footer id="colophon" class="site-footer">
     <?php
       wp_nav_menu( array(
