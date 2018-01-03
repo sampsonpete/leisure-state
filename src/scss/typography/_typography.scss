@@ -11,6 +11,16 @@ textarea {
   line-height: $font__line-height-body;
 }
 
+/*
+ * Selected text
+ */
+::selection {
+  background: $color__highlight;
+}
+::-moz-selection {
+  background: $color__highlight;
+}
+
 @import "headings";
 
 @import "copy";
