@@ -13,18 +13,14 @@
 
 	</div><!-- #content -->
 
-  <div id="instafeed"></div>
-
-	<footer id="colophon" class="site-footer">
-    <?php
-      wp_nav_menu( array(
-        'theme_location' => 'menu-2',
-        'menu_id'        => 'footer-menu',
-      ) );
-    ?>
-
-    <p class="copyright">&copy; Leisure State <?php echo date("Y"); ?></p>
-	</footer><!-- #colophon -->
+	<footer class="site-footer">
+    <?php dynamic_sidebar('footer-text'); ?>
+    <div class="site-footer__instagram-wrapper">
+      <h3 class="site-footer__heading">@leisure_state on Instagram</h3>
+      <div id="instafeed" class="site-footer__instagram-feed"></div>
+    </div>
+    <p class="site-footer__copyright">&copy; Leisure State <?php echo date("Y"); ?></p>
+	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

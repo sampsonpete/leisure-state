@@ -45,7 +45,7 @@ if ( ! function_exists( 'leisure_state_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'leisure-state' ),
-      'menu-2' => esc_html__( 'Footer', 'leisure-state' ),
+      // 'menu-2' => esc_html__( 'Footer', 'leisure-state' ),
 		) );
 
 		/*
@@ -103,13 +103,13 @@ add_action( 'after_setup_theme', 'leisure_state_content_width', 0 );
  */
 function leisure_state_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'leisure-state' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Footer Text', 'leisure-state' ),
+		'id'            => 'footer-text',
 		'description'   => esc_html__( 'Add widgets here.', 'leisure-state' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_widget' => '<div class="site-footer__text">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="site-footer__heading">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'leisure_state_widgets_init' );

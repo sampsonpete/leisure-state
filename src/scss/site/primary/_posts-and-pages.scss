@@ -25,6 +25,7 @@
 
 .entry-title{
   font-size: $font__size-delta;
+  margin-bottom: 2rem;
 
   @include mappy-bp(medium) {
     font-size: $font__size-echo;
