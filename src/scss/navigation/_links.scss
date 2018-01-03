@@ -10,9 +10,9 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-    background-color: $color__link-hover;
-    // border-color: $color__link-hover;
-		color: $color__link;
+    // background-color: $color__link-hover;
+    border-color: $color__link-hover;
+		color: $color__link-hover;
 	}
 	&:focus {
 		outline: none;
