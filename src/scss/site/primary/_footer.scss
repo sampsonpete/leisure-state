@@ -57,7 +57,7 @@
   border-top: 0.125rem solid black;
   @include clearfix;
 }
-.site-footer__instagram-feed img {
+.site-footer__instagram-feed a {
   border-right: 0.125rem solid black;
   border-bottom: 0.125rem solid black;
   float: left;
@@ -67,5 +67,13 @@
   @include mappy-bp(large) {
     max-width: 20%;
     padding: 1rem;
+  }
+
+  img {
+    transition: transform 200ms ease;
+  }
+
+  &:hover img {
+    transform: scale(0.95);
   }
 }
