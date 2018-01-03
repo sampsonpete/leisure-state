@@ -6,7 +6,7 @@
 
 // requires: vendor/instafeed.js
 
-( function( $ ) {
+(function() {
 
   var feed = new Instafeed({
     get: 'user',
@@ -15,4 +15,4 @@
   });
   feed.run();
 
-} )( jQuery );
+})();
