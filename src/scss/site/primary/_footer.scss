@@ -9,7 +9,7 @@
  * Copyright
  */
 .site-footer__copyright {
-
+  clear: both;
 }
 
 /*
@@ -49,7 +49,7 @@
   }
 
   @include mappy-bp(large) {
-    width: 66.6666666%;
+    float: right;
   }
 }
 .site-footer__instagram-feed {
