@@ -14,11 +14,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'The page you’re looking for can’t be found', 'leisure-state' ); ?></h1>
+					<h1 class="page-title">The page you’re looking for can’t be found</h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'Back to <a href="/">homepage</a>.', 'leisure-state' ); ?></p>
+					<p>Back to <a href="/">homepage</a></p>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

@@ -1,7 +1,10 @@
-body.page {
+body.page,
+body.error404 {
 
   .entry-title,
+  .page-title,
   .entry-content,
+  .page-content,
   .entry-footer {
 
     @include mappy-bp(medium) {
@@ -12,6 +15,7 @@ body.page {
   }
 
   .entry-content,
+  .page-content,
   .entry-footer {
     margin-bottom: 4rem;
   }
