@@ -31,11 +31,6 @@
     font-size: $font__size-echo;
     margin-top: -0.25rem;
   }
-
-  // @include mappy-bp(large) {
-  //   font-size: $font__size-foxtrot;
-  //   margin-top: -0.4375rem;
-  // }
 }
 
 /**
@@ -87,22 +82,43 @@
 
 .post-navigation {
   font-size: $font__size-bravo;
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
+  margin-bottom: 6rem;
+  @include clearfix;
 
-  @include mappy-bp(medium) {
-    margin-bottom: 0;
+  .nav-links a > span {
+    border-bottom: 0;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .nav-previous {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-next {
+    margin-right: 0;
   }
 
   .nav-previous::before {
     content: 'Previous article ';
+    display: block;
   }
 
   .nav-next::before {
     content: 'Next article ';
+    display: block;
   }
 
-  .nav-links div {
-    margin-bottom: 2rem;
+  /* Layout of links */
+  @include mappy-bp(large) {
+    .nav-links div {
+      float: left;
+      width: calc(50% - 1rem);
+    }
+
+    .nav-previous {
+      margin-bottom: 0;
+    }
   }
 }

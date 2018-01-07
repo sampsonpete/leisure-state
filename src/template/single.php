@@ -18,8 +18,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', get_post_type() );
 
       $args = array(
-      	'prev_text'          => 'Previous article %title',
-      	'next_text'          => 'Next article %title',
+      	'prev_text'          => '<span>%title</span> Read more</a>',
+      	'next_text'          => '<span>%title</span> Read more</a>',
       	'in_same_term'       => false,
       	'taxonomy'           => 'category',
       	'excluded_terms'     => array(),
