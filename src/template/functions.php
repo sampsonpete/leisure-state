@@ -60,26 +60,8 @@ if ( ! function_exists( 'leisure_state_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'leisure_state_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'leisure_state_setup' );
@@ -120,14 +102,6 @@ add_action( 'widgets_init', 'leisure_state_widgets_init' );
 function leisure_state_scripts() {
 	wp_enqueue_style( 'leisure-state-style', get_stylesheet_uri() );
 
-	// wp_enqueue_script( 'leisure-state-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	// wp_enqueue_script( 'leisure-state-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-  // wp_enqueue_script( 'leisure-state-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array(), '20171113', true );
-
-  // wp_enqueue_script( 'leisure-state-logo', get_template_directory_uri() . '/js/logo.js', array(), '20171113', true );
-
   wp_enqueue_script( 'leisure-state-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '20180103', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -135,11 +109,6 @@ function leisure_state_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'leisure_state_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
