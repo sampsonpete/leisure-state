@@ -1,0 +1,33 @@
+body.blog,
+body.tag,
+body.category {
+
+  @include mappy-bp(medium) {
+    .entry-wrapper {
+      @include clearfix;
+    }
+
+    .entry-image {
+      float: left;
+      margin-right: 2rem;
+      min-height: 1rem;
+      width: calc(50% - 1rem);
+    }
+
+    .entry-info{
+      float: left;
+      width: calc(50% - 1rem);
+    }
+  }
+
+  @include mappy-bp(large) {
+    .entry-image {
+      width: calc(66.6% - 1rem);
+    }
+
+    .entry-info{
+      width: calc(33.3% - 1rem);
+    }
+  }
+
+}

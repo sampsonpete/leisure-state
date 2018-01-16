@@ -1,0 +1,23 @@
+body.page,
+body.error404 {
+
+  .entry-title,
+  .page-title,
+  .entry-content,
+  .page-content,
+  .entry-footer {
+
+    @include mappy-bp(medium) {
+      margin-left: calc(50%);
+      padding-left: 2rem;
+      width: calc(50%);
+    }
+  }
+
+  .entry-content,
+  .page-content,
+  .entry-footer {
+    margin-bottom: 4rem;
+  }
+
+}

@@ -1,30 +1,79 @@
 .site-footer {
-  border-top: 0.0625rem solid $color__text-main;
   margin-top: 4rem;
-  padding-top: 4rem;
-  font-size: $font__size-small;
+  font-size: $font__size-alpha;
   width: 100%;
   @include clearfix;
+}
+
+/*
+ * Copyright
+ */
+.site-footer__copyright {
+  clear: both;
+}
+
+/*
+ * Headings
+ */
+.site-footer__heading {
+  font-size: $font__size-alpha;
+}
+
+/*
+ * About text
+ */
+.site-footer__text {
+  margin-bottom: 4rem;
+
+  @include mappy-bp(medium) {
+    float: left;
+    padding-right: 2rem;
+    width: 50%;
+  }
 
   @include mappy-bp(large) {
-    border-top: 0;
+    width: 33.3333333%;
   }
 }
 
-.menu-footer-menu-container {
+/*
+ * Instagram feed
+ */
+.site-footer__instagram-wrapper {
+  margin-bottom: 4rem;
+
+  @include mappy-bp(medium) {
+    float: left;
+    padding-left: 2rem;
+    width: 50%;
+  }
+
+  @include mappy-bp(large) {
+    float: right;
+  }
+}
+.site-footer__instagram-feed {
+  border-left: 0.125rem solid black;
+  border-top: 0.125rem solid black;
+  @include clearfix;
+}
+.site-footer__instagram-feed a {
+  border-right: 0.125rem solid black;
+  border-bottom: 0.125rem solid black;
   float: left;
-  width: 50%;
-}
+  max-width: 33.3333333%;
+  padding: 0.5rem;
 
-.copyright {
-  float: right;
-  text-align: right;
-  margin: 0;
-  width: 50%;
-}
+  @include mappy-bp(large) {
+    max-width: 20%;
+    padding: 1rem;
+  }
 
-#footer-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  img {
+    transition: transform 200ms ease;
+  }
+
+  &:hover img {
+    transform: scale(0.95);
+  }
 }

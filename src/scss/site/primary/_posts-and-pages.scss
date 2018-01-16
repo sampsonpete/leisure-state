@@ -11,35 +11,36 @@
 }
 
 .post {
-  border-bottom: 0.0625rem solid $color__text-main;
+  font-size: $font__size-bravo;
   margin-bottom: 4rem;
-  padding-bottom: 4rem;
-  @include clearfix;
 }
 
 .attachment-post-thumbnail {
-  margin-bottom: 1.5rem;
-}
-
-.entry-title{
-  font-size: $font__size-large;
-  @include mappy-bp(medium) {
-    font-size: $font__size-extralarge;
-  }
-}
-
-.page-title {
-  font-size: $font__size-large;
   margin-bottom: 2rem;
 }
 
-.entry-meta {
-  font-size: $font__size-small;
+/**
+ * Title on index pages
+ **/
+
+.entry-title,
+.page-title {
+  font-size: $font__size-delta;
+  margin-bottom: 2rem;
+
+  @include mappy-bp(medium) {
+    font-size: $font__size-echo;
+    margin-top: -0.25rem;
+  }
 }
+
+/**
+ * Date and tags
+ **/
 
 .entry-tags {
   list-style: none;
-  margin: 1rem 0 3rem;
+  margin: 0 0 2rem;
   padding: 0;
 
   li {
@@ -48,56 +49,20 @@
   }
 }
 
+/**
+ * Content on index and article pages
+ **/
+
 .entry-content {
-  font-size: $font__size-medium;
 
   p:first-of-type {
     margin-top: 0;
-  }
-
-  .read-more-link {
-    font-size: $font__size-small;
-  }
-}
-
-/**
- * Position post meta and entry content on larger screens
- * Only on index pages
- **/
-@include mappy-bp(medium) {
-
-  body.blog,
-  body.tag,
-  body.category {
-
-    .entry-meta {
-      float: left;
-      width: 25%;
-    }
-
-    .entry-content {
-      float: right;
-      width: 65%;
-    }
   }
 }
 
 /**
  * Article pages
  **/
-
-@include mappy-bp(large) {
-
-  .article-featured-image {
-    float: left;
-    width: 47.5%;
-  }
-
-  .article-content {
-    float: right;
-    width: 47.5%;
-  }
-}
 
 .entry-content {
 
@@ -106,39 +71,68 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+  @include mappy-bp(large) {
+    font-size: $font__size-charlie;
+  }
 }
 
-.wp-caption {
-  width: 100% !important;
-}
-
-.wp-caption .wp-caption-text {
-  font-size: $font__size-small;
-  margin-bottom: 2rem !important;
+.single .entry-image {
+  margin-top: 2rem;
 }
 
 /**
- * Post navigation
+ * Post navigation (on single pages)
  **/
-.post-navigation {
-  border-bottom: 0.0625rem solid $color__text-main;
-  font-size: $font__size-medium;
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
 
-  @include mappy-bp(medium) {
-    margin-bottom: 0;
+.post-navigation {
+  font-size: $font__size-bravo;
+  margin-bottom: 6rem;
+  @include clearfix;
+
+  .nav-links a > span {
+    border-bottom: 0;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .nav-previous {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-next {
+    margin-right: 0;
   }
 
   .nav-previous::before {
-    content: 'Previous: ';
+    content: 'Previous article ';
+    display: block;
   }
 
   .nav-next::before {
-    content: 'Next: ';
+    content: 'Next article ';
+    display: block;
   }
 
-  .nav-links div {
-    margin-bottom: 2rem;
+  /* Layout of links */
+  @include mappy-bp(large) {
+    .nav-links div {
+      float: left;
+      width: calc(50% - 1rem);
+    }
+
+    .nav-previous {
+      margin-bottom: 0;
+    }
   }
+}
+
+/**
+ * Posts navigation (on index/archive pages)
+ **/
+.posts-navigation {
+  font-size: $font__size-bravo;
+  margin-bottom: 6rem;
+  @include clearfix;
 }

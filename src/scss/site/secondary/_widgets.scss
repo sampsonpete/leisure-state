@@ -1,32 +1,32 @@
-.widget-area {
-  margin-top: 4rem;
-
-  @include mappy-bp(large) {
-    margin-top: 0;
-  }
-}
-
-.widget {
-  font-size: $font__size-small;
-	margin: 0 0 4rem;
-
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
-
-  h2,
-  h3,
-  #sb_instagram .sb_instagram_header h3 {
-    font-size: $font__size-small;
-    font-family: $font__main;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 1.6em;
-    text-transform: none;
-  }
-
-  #sb_instagram .sb_instagram_header p {
-    font-size: $font__size-small;
-  }
-}
+// .widget-area {
+//   margin-top: 4rem;
+//
+//   @include mappy-bp(large) {
+//     margin-top: 0;
+//   }
+// }
+//
+// .widget {
+//   font-size: $font__size-alpha;
+// 	margin: 0 0 4rem;
+//
+// 	/* Make sure select elements fit in widgets. */
+// 	select {
+// 		max-width: 100%;
+// 	}
+//
+//   h2,
+//   h3,
+//   #sb_instagram .sb_instagram_header h3 {
+//     font-size: $font__size-alpha;
+//     font-family: $font__main;
+//     font-weight: 500;
+//     margin-top: 0;
+//     margin-bottom: 1.6em;
+//     text-transform: none;
+//   }
+//
+//   #sb_instagram .sb_instagram_header p {
+//     font-size: $font__size-alpha;
+//   }
+// }

@@ -45,10 +45,11 @@ big {
 }
 
 b, strong {
-  font-weight: 500;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 i, em {
-  font-weight: 400;
+  font-weight: bold;
   font-style: italic;
 }
