@@ -1,3 +1,11 @@
 .site {
   margin: 2rem;
+
+  @include mappy-bp(medium) {
+    margin: 3rem;
+  }
+
+  @include mappy-bp(large) {
+    margin: 4rem;
+  }
 }
