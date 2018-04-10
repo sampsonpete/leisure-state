@@ -11,9 +11,10 @@
   var feed = new Instafeed({
     get: 'user',
     userId: '3022060396', // @leisure_state
-    accessToken: '192260528.3a81a9f.d0cab468398a4bc5b0e4a529173c8c6b',
     resolution: 'standard_resolution',
-    limit: 15
+    limit: 15,
+    clientId: '9d7dca59b98b4a42a7e0728a90b672e0',
+    accessToken: '3022060396.1677ed0.94c9d8e3e1a24a1890022d5e6781885b'
   });
   feed.run();
 
